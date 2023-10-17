@@ -75,14 +75,5 @@ const products = [
     descripcion: "Juego de 6 tazas, para decorar la mesa de manera unica",
     destacado: true,
   },
-  {
-    id: 9,
-    precio: 400,
-    nombre: "Set de tazas",
-    img: "https://i.pinimg.com/736x/a5/4c/4a/a54c4a5a465a8649f1f1fc3e42c5faad.jpg",
-    categoria: "Sets",
-    descripcion: "Juego de 6 tazas, para decorar la mesa de manera unica",
-    destacado: true,
-  },
 ];
 export default products;

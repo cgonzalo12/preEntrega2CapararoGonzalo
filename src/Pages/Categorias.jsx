@@ -27,7 +27,7 @@ const Categorias = () => {
                 variant="dark"
                 onClick={() => navigate(`/categorias/${cat[index].id}`)}
               >
-                s Ver Categoria
+                Ver Categoria
               </Button>
             </Card.Body>
           </Card>
