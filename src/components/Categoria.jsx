@@ -1,9 +1,15 @@
+import PropTypes from "prop-types";
+import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 
-const Categoria = (img, nombre, id) => {
+const Categoria = ({ img, nombre, id }) => {
+  Categoria.propTypes = {
+    img: PropTypes.string.isRequired,
+    nombre: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  };
   const navigate = useNavigate();
 
   return (

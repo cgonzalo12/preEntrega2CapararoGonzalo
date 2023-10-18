@@ -2,16 +2,16 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
+
 import PropTypes from "prop-types";
 
-const Producto = ({ id, nombre, img, precio }) => {
-  const navigate = useNavigate();
+const Producto = ({ id, nombre, img, precio, onClickDetalle }) => {
   Producto.propTypes = {
     id: PropTypes.number.isRequired,
     nombre: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     precio: PropTypes.number.isRequired,
+    onClickDetalle: PropTypes.func.isRequired,
   };
   return (
     <>
@@ -29,12 +29,8 @@ const Producto = ({ id, nombre, img, precio }) => {
               Codigo de producto: {id}
             </Card.Text>
             <Button variant="dark">Comprar</Button>
-            <Button
-              variant="dark"
-              className="m-2"
-              onClick={() => navigate(`/ItemsListContainer/${id}`)}
-            >
-              Ver detalle
+            <Button variant="dark" className="m-2" onClick={onClickDetalle}>
+              Vista Rapida
             </Button>
             <Link to={`/ItemsListContainer/${id}`} className="btn btn-dark m-2">
               Detalle Producto
